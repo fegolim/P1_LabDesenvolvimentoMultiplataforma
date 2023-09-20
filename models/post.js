@@ -5,13 +5,13 @@ const Cadastro_notas_materias = db.sequelize.define("cadastro_notas_materias", {
         type: db.Sequelize.ENUM('Portugues', 'Matematica', 'Biologia', 'Quimica', 'Ciencias')
     },
     nota1: {
-        type: db.Sequelize.INTERGER
+        type: db.Sequelize.INTEGER
     },
     nota2: {
-        type: db.Sequelize.INTERGER
+        type: db.Sequelize.INTEGER
     },
     nota3: {
-        type: db.Sequelize.INTERGER
+        type: db.Sequelize.INTEGER
     }
 
 
@@ -20,6 +20,6 @@ const Cadastro_notas_materias = db.sequelize.define("cadastro_notas_materias", {
 }
 )
 
-Cadastro_notas_materias.sync({force: true})
+//Cadastro_notas_materias.sync({force: true})
 
 module.exports = Cadastro_notas_materias

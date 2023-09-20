@@ -1,0 +1,87 @@
+<div class="container text-center">
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-primary">
+            <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">P1_DesenvolvimentoMultiplataforma</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="/">Cadastrar</a>
+                            <a class="nav-link" href="/consulta">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-white">
+            &nbsp;
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+        <div class="col bg-white">
+            <p class="text-start fs-5">Cadastrar - Notas Disciplinas</p>
+            <p class="text-start fs-6">Sistema utilizado para lançamento de notas das disciplinas.</p>
+            <p>
+                {{#each post}}
+                    {{#dataValues}}
+                        <form action="/atualizar" method="POST">
+                            <div class="mb-3 text-start">
+                                <input type="hidden" name="id" class="form-control" id="disciplina" value="{{id}}">
+                                <label class="form-label">Disciplina:</label>
+                                <input type="name" name="disciplina" class="form-control" id="disciplina" value="{{disciplina}}"> 
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label class="form-label">Disciplina:</label>
+                                <select name="disciplina" class="form-select" aria-label="Default select example">
+                                    <option value="portugues">portugues</option>
+                                    <option value="matematica">matematica</option>
+                                    <option value="biologia">biologia</option>
+                                    <option value="quimica">quimica</option>                                    
+                                </select>
+                            </div>
+
+                            <div class="mb-3 text-start">
+                                <label class="form-label">nota1:</label>
+                                <input type="date" name="nota1" class="form-control" id="nota1" aria-describedby="nota1" value="{{nota1}}">
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label class="form-label">nota2:</label>
+                                <input type="date" name="nota1" class="form-control" id="nota2" aria-describedby="nota2" value="{{nota1}}">
+                            </div>
+                            <div class="mb-3 text-start">
+                                <label class="form-label">nota3:</label>
+                                <input type="date" name="nota1" class="form-control" id="nota3" aria-describedby="nota3" value="{{nota1}}">
+                            </div>                            
+                            <div class="mb-3 text-start">
+                                <button type="submit" class="btn btn-primary">Atualizar</button>
+                            </div>
+                        </form>
+                    {{/dataValues}}
+                {{/each}}
+            </p>
+        </div>
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+</div>
